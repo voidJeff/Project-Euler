@@ -1,9 +1,11 @@
 num = list(range(1, 1001))
-n = 0
-while n < len(num):
-    if num[n]%3 != 0 or num[n]%5 != 0:
-        if num.count(num[n]) != 0:
-            num.remove(num[n])
-    n += 1
-print(num)
-print(sum(num))
+n_num = []
+i = 1
+while i*3 <= 1000 or i*5 <= 1000:
+    if num.count(3*i) == 1:
+        n_num.append(3*i)
+    if num.count(5*i) == 1:
+        n_num.append(5*i)
+    i += 1
+print(n_num)
+print(sum(n_num))
